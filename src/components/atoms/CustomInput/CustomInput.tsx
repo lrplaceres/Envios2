@@ -1,4 +1,4 @@
-import { Input } from "@/components/ui/input";
+import { Input } from "@ui/input";
 //INTERFACES
 import { CustomInputInterface } from "@interfaces/CustomInput.interfaces";
 

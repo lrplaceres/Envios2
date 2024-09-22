@@ -23,6 +23,7 @@
       "@molecules/*": ["./src/components/molecules/*"],
       "@organisms/*": ["./src/components/organisms/*"],
       "@interfaces/*": ["./src/components/interfaces/*"],
+      "@ui/*": ["./src/components/ui/*"],
       "@utils/*": ["./utils/*"],
       "auth": ["./src/auth"],
       "@src/*": ["./src/*"],
