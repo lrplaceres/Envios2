@@ -13,7 +13,7 @@ const LoginForm = ({
 }: propsLoginFormInterface) => {
   return (
     <div>
-      <h1 className="font-sans text-2xl font-bold text-center mb-2">{title}</h1>
+      <h1 className="font-sans text-2xl font-semibold text-center mb-2 tracking-tight scroll-m-20">{title}</h1>
       <CustomInput {...inputUsername} />
       <CustomInput {...inputPassword} />
       <CustomButton {...buttonLogin} />

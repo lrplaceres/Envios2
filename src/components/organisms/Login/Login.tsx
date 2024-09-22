@@ -10,19 +10,19 @@ const Login = () => {
     name: "username",
     type: "text",
     placeholder: "Usuario",
-    className: "border border-slate-300 border-solid mb-2 rounded",
+    className: "mb-2 ",
   };
 
   const inputPassword: CustomInputInterface = {
     name: "username",
     type: "password",
     placeholder: "Contraseña",
-    className: "border border-slate-300 border-solid mb-2 rounded",
+    className: "mb-2",
   };
 
   const buttonLogin: CustomButtonInterface = {
     text:"Acceder",
-    className:"w-full rounded bg-slate-600 text-white hover:text-slate-600"
+    className:"w-full"
   }
 
   const propsLoginForm: propsLoginFormInterface = {
