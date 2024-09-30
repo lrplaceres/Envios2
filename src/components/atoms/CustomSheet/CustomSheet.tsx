@@ -1,6 +1,4 @@
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+import { CustomSheetInterface } from "@/components/interfaces/CustomSheet.interface";
 import {
   Sheet,
   SheetClose,
@@ -11,38 +9,29 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@ui/sheet";
+import { CustomButton } from "../CustomButton";
 
-const CustomSheet = () => {
+const CustomSheet = ({
+  textButtonNewCustomSheet,
+  textHeaderCustomSheet,
+  textDescriptionCustomSheet,
+  viewToRenderCustomSheet,
+  buttonSave,
+}: CustomSheetInterface) => {
   return (
     <Sheet>
       <SheetTrigger className="flex h-9 items-center space-x-1 rounded-md border p-1 shadow-sm text-sm font-medium outline-none focus:bg-accent focus:text-accent-foreground">
-        Nuevo Cliente
+        {textButtonNewCustomSheet}
       </SheetTrigger>
       <SheetContent side="right">
         <SheetHeader>
-          <SheetTitle>Are you absolutely sure?</SheetTitle>
-          <SheetDescription>
-            This action cannot be undone. This will permanently delete your
-            account and remove your data from our servers.
-          </SheetDescription>
+          <SheetTitle>{textHeaderCustomSheet}</SheetTitle>
+          <SheetDescription>{textDescriptionCustomSheet}</SheetDescription>
         </SheetHeader>
-        <div className="grid gap-4 py-4">
-          <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="name" className="text-right">
-              Name
-            </Label>
-            <Input id="name" value="Pedro Duarte" className="col-span-3" />
-          </div>
-          <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="username" className="text-right">
-              Username
-            </Label>
-            <Input id="username" value="@peduarte" className="col-span-3" />
-          </div>
-        </div>
+        {viewToRenderCustomSheet}
         <SheetFooter>
           <SheetClose asChild>
-            <Button type="submit">Save changes</Button>
+            <CustomButton {...buttonSave} />
           </SheetClose>
         </SheetFooter>
       </SheetContent>

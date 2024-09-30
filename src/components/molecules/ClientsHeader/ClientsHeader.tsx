@@ -1,3 +1,4 @@
+import { propsClientsHeaderInterface } from "@/components/interfaces/propsClientsHeader.interface";
 import { CustomSheet } from "@atoms/CustomSheet";
 import {
   Menubar,
@@ -12,14 +13,30 @@ import { MdMenu } from "react-icons/md";
 
 //ATOMS
 
-const ClientsHeader = () => {
+const ClientsHeader = ({
+  viewToRenderCustomSheet,
+  textButtonNewCustomSheet,
+  buttonSave,
+  textHeaderCustomSheet,
+  textDescriptionCustomSheet,
+}: propsClientsHeaderInterface) => {
   return (
     <div className="h-16 flex items-center justify-between">
-      <CustomSheet />
+      <CustomSheet
+        {...{
+          viewToRenderCustomSheet,
+          textButtonNewCustomSheet,
+          buttonSave,
+          textHeaderCustomSheet,
+          textDescriptionCustomSheet
+        }}
+      />
       <Menubar>
         <MenubarMenu>
-          <MenubarTrigger><MdMenu size={20}/></MenubarTrigger>
-          <MenubarContent>                      
+          <MenubarTrigger>
+            <MdMenu size={20} />
+          </MenubarTrigger>
+          <MenubarContent>
             <MenubarSeparator />
             <MenubarItem>Print</MenubarItem>
           </MenubarContent>
